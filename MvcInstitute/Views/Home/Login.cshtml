@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_Layout_Login.cshtml";
+}
+
+
+<div class="container">
+    <h1>Login</h1>
+    <form action="~/Home/Login" method="post">
+        <div>
+            <label for="user">Choose User..</label><br />
+            <input type="radio" name="user" id="stu" value="stud" /> Student
+            <input type="radio" name="user" id="adm" value="admi" /> Admin
+        </div><br />
+        <div>
+            <p>
+                <label for="dni">Dni: </label>
+                <input type="text" name="dni" id="input_Dni" />
+            </p>
+            <p>
+                <label for="docker">Docker: </label>
+                <input type="text" name="docket" id="input_Docket" />
+            </p>
+            <p>
+                <input type="submit" name="login_btn" value="Login" />
+            </p>
+        </div>
+    </form>
+</div>

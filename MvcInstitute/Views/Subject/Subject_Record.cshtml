@@ -1,0 +1,35 @@
+﻿@using MvcInstitute.ViewModels
+@model List<ViewModel_Subject>
+
+
+@{
+    ViewBag.Title = "Subject Record";
+}
+
+
+<h1>@ViewBag.title</h1>
+<div class="container">
+    <form action="~/Home/Subject_Info" method="get">
+        List of subjects with vacancy..
+        <fieldset>
+            <div>
+                <label for="choose_subject"><strong> Choose subject: </strong></label>
+                <select value="choose_subject" name="choose_subject" id="choose_subject">
+                    @foreach (var elem in Model)
+                    {
+                        <option value=@elem.Name>@elem.Name</option>
+                    }
+                </select>
+                <button type="submit" name="choose" value="choose">Info</button>
+            </div>
+            <div>
+
+
+            </div>
+            <div>
+                <input type="submit" name="registry" value="registry" />
+            </div>
+        </fieldset>
+    </form>
+</div>
+

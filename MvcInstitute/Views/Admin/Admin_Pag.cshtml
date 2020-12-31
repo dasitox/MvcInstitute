@@ -1,0 +1,89 @@
+﻿@using MvcInstitute.ViewModels
+@using MvcInstitute.Models
+@model ViewModel_Data_Manager
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=divice-width,initial-scale=1.0"/>
+    <title>Data Manager</title>
+</head>
+<body>
+    <h1>DATA MANAGER</h1>
+    <H3>Hello Admin!</H3>
+    <table border="1" class="bg-info" cellpadding="2">
+        List Students
+        <tr>
+            <td>Id</td>
+            <td>Dni</td>
+            <td>Docket</td>
+            <td>Enrolled Subject</td>
+            <td>Status</td>
+        </tr>
+        @foreach (var i in Model.Students)
+        {
+            <tr>
+                <td>@i.Id</td>
+                <td>@i.Dni</td>
+                <td>@i.Docket</td>
+                <td>@i.Enrolled_Subject</td>
+                <td>@i.Status</td>
+            </tr>
+        }
+    </table>
+    <br />
+    <table border="1" class="bg-info" cellpadding="2">
+        List Subjects
+        <tr>
+            <td>Id</td>
+            <td>Name</td>
+            <td>Teacher</td>
+            <td>Schedule</td>
+            <td>Information</td>
+            <td>Quota</td>
+            <td>Enrolled</td>
+        </tr>
+        @foreach (var i in Model.Subjects)
+        {
+            <tr>
+                <td>@i.Id</td>
+                <td>@i.Name</td>
+                <td>@i.Teacher</td>
+                <td>@i.Schedule</td>
+                <td>@i.Information</td>
+                <td>@i.Quota</td>
+                <td>@i.Enrolled</td>
+            </tr>
+        }
+    </table>
+    <br />
+    <table border="1" class="bg-info" cellpadding="2">
+        List Subjects
+        <tr>
+            <td>Id</td>
+            <td>Name</td>
+            <td>Surname</td>
+            <td>Dni</td>
+            <td>Active</td>
+            <td>Status</td>
+        </tr>
+        @foreach (var i in Model.Teachers)
+        {
+            <tr>
+                <td>@i.Id</td>
+                <td>@i.Name</td>
+                <td>@i.Surname</td>
+                <td>@i.Dni</td>
+                <td>@i.Active</td>
+                <td>@i.Status</td>
+            </tr>
+        }
+    </table>
+</body>
+</html>
+
+
+
+
+
+
